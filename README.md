@@ -16,7 +16,7 @@ Pour chacun de ces tests unitaires, expliquez quel est le comportement attendu d
 Un petit peu d'aide pour commencer :
 
 1. Commencez par lire la classe `StudentTest`
-2. Renseignez vous sur la classe [SimpleDateFormat](http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html)
+2. Renseignez vous sur la classe [SimpleDateFormat](http://docs.oracle.com/javase/8/docs/api/java/text/DateFormat.html)
 3. Créez la classe `Student`
 4. Ecrivez juste l'interface suffisante pour pouvoir jouer les tests (i.e. les méthodes avec le bon nom et la bonne signature)
 5. Implémentez le corps des méthodes
