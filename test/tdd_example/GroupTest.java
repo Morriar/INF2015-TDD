@@ -95,4 +95,22 @@ public class GroupTest {
         Double result = testee.getGroupAverage();
         assertEquals(expResult, result);
     }
+
+    @Test
+    public void testSendGroupMail() throws ParseException {
+        System.out.println("sendGroupMail");
+
+        Student s1 = new Student("Doe", "John", formater.parse("12/10/1987"));
+        Student s2 = new Student("Justin", "Plof", formater.parse("29/04/1992"));
+
+        testee.addStudent(s1);
+        testee.addStudent(s2);
+
+        testee.sendGroupMail("Test Subject", "Test Message");
+
+        // TODO Vérifier que le groupe a bien appelé le mail sender
+        // pour chaque étudiant avec les bons paramètres.
+        //
+        // Comment faire?
+    }
 }
