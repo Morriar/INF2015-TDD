@@ -103,6 +103,8 @@ public class GroupTest {
         Student s1 = new Student("Doe", "John", formater.parse("12/10/1987"));
         Student s2 = new Student("Justin", "Plof", formater.parse("29/04/1992"));
 
+        MailSenderTest testSender = new MailSenderTest();
+        Group testee = new Group(testSender);
         testee.addStudent(s1);
         testee.addStudent(s2);
 
@@ -112,5 +114,12 @@ public class GroupTest {
         // pour chaque étudiant avec les bons paramètres.
         //
         // Comment faire?
+
+        assertEquals(testSender.sentMails.size(), 2);
+        for(MailSenderTest.SentMail mail : testSender.sentMails) {
+            assertEquals(mail.subject, "Test Subject");
+            assertEquals(mail.message, "Test Message");
+            assertNotNull(mail.permaCode);
+        }
     }
 }
