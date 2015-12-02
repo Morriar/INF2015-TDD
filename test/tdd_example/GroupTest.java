@@ -30,7 +30,7 @@ public class GroupTest {
     @Before
     public void setUp() {
         formater = new SimpleDateFormat("dd/MM/yyyy");
-        testee = new Group();
+        testee = new Group(new MailSenderTest());
     }
 
     @Test
