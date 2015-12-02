@@ -51,4 +51,11 @@ public class Group {
         }
         return sum / students.size();
     }
+
+    public void sendGroupMail(String subject, String message) {
+        MailSender mailSender = new UQAMMailSender();
+        for(Student student : students.values()) {
+            mailSender.send(student.getPermaCode(), subject, message);
+        }
+    }
 }
